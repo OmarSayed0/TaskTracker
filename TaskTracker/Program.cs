@@ -70,27 +70,23 @@ namespace TaskTracker
         private static void AddTask()
         {
             Console.WriteLine("Enter Task Name : ");
-            string taskName = Console.ReadLine();
-            Tasks[TaskIndex] = taskName;
+            Tasks[TaskIndex] = Console.ReadLine();
             TaskIndex++;
             Console.WriteLine("Task Added Successfully");
         }
         private static void DeleteTask()
         {
             Console.WriteLine("Enter Task Number : ");
-            string taskNum = Console.ReadLine();
-            int taskID = Convert.ToInt32(taskNum);
+            int taskID = Convert.ToInt32(Console.ReadLine());
             Tasks[taskID-1] = "";
             Console.WriteLine("Task Deleted Successfully");
         }
         private static void UpdateTask()
         {
             Console.WriteLine("Enter Task Number : ");
-            string taskNum = Console.ReadLine();
-            int taskID = Convert.ToInt32(taskNum);
-            Console.WriteLine("Enter New Task Name : ");
-            string newTaskName = Console.ReadLine();
-            Tasks[taskID-1] = newTaskName;
+            int taskID = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter New Task Name : "); 
+            Tasks[taskID - 1] = Console.ReadLine();
             Console.WriteLine("Task Updated Successfully");
         }
         private static void ViewAllTask()
